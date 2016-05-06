@@ -1,0 +1,101 @@
+<div>
+  
+        <link href="bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
+
+      
+            <div id="page-wrapper">
+
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">
+                                Dashboard <small>Statistics Overview</small>
+                            </h1>
+                            <ol class="breadcrumb">
+                                <li class="active">
+                                    <i class="fa fa-dashboard"></i> Dashboard
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+
+                    <!-- /.row -->
+
+
+                    <div class="row" ng-controller="UpdateDriverController">
+                        <h3>Update Driver Info</h3>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <form role="form" action="http://localhost:8000/api/v1/driver/8" method="post" enctype="multipart/form-data">
+                                   
+                                      <div class="form-group" ng-class="{ 'has-error' : addDriverForm.drivar_name.$invalid && !addDriverForm.drivar_name.$pristine}">
+                                                      <label>Driver Name</label>
+                                                      <input class="form-control" name="name" ng-model="driver.name" ng-required="true">
+                                                    <p ng-show="addDriverForm.drivar_name.$invalid && !addDriverForm.drivar_name.$pristine" class="help-block">You name is required.</p>
+                                                  </div>
+
+                                                  <div class="form-group" ng-class="{ 'has-error' : addDriverForm.driver_contact_number.$invalid && !addDriverForm.driver_contact_number.$pristine}">
+                                                      <label>Contact Number</label>
+                                                      <input class="form-control" name="contact" ng-model="driver.contact" ng-required="true">
+                                                      <p ng-show="addDriverForm.driver_contact_number.$invalid&& !addDriverForm.driver_contact_number.$pristine" class="help-block">You Contact Number is required.</p>
+                                                  </div>
+
+                                                  <div class="form-group" ng-class="{ 'has-error' : addDriverForm.driver_address.$invalid && !addDriverForm.driver_address.$pristine}">
+                                                      <label>Address</label>
+                                                      <input class="form-control" name="address" ng-model="driver.address" ng-required="true">
+                                                      <p ng-show="addDriverForm.driver_addres.$invalid && !addDriverForm.driver_address.$pristine" class="help-block">You Address is required.</p>
+                                                  </div>
+
+                                                  <div class="form-group" ng-class="{ 'has-error' : addDriverForm.driver_national_id.$invalid && !addDriverForm.driver_national_id.$pristine}">
+                                                      <label>National ID</label>
+                                                      <input class="form-control" name="nid" ng-model="driver.nid" ng-required="true" ng-minlength="13" ng-maxlength="17">
+                                                      <p ng-show="addDriverForm.driver_national_id.$invalid && !addDriverForm.driver_national_id.$pristine" class="help-block">You National ID is required.</p>
+                                                  </div>
+
+                                                  <div class="form-group" ng-class="{ 'has-error' : addDriverForm.driver_license_number.$invalid && !addDriverForm.driver_license_number.$pristine}">
+                                                      <label>Driving License Number</label>
+                                                      <input class="form-control" name="license_id" ng-model="driver.license_id" ng-required="true" ng-minlength="15" ng-maxlength="20">
+                                                      <p ng-show="addDriverForm.driver_license_number.$invalid && !addDriverForm.driver_license_number.$pristine" class="help-block">You Driving License Number is required.</p>
+                                                  </div>
+
+                                                  <div class="form-group">
+                                                      <label>Driver Photo</label>
+                                                      <input type="file" class="form-control" file-model="driver.myFile1" ng-required="true" name="driver_photo">
+                                                  </div>
+
+                                                  <div class="form-group">
+                                                      <label>National Id Photo</label>
+                                                      <input type="file" class="form-control" file-model="driver.myFile2" ng-required="true" name="nid_photo">
+                                                  </div>
+
+                                                  <div class="form-group">
+                                                      <label>Driving License Photo</label>
+                                                      <input type="file" class="form-control" file-model="driver.myFile3" ng-required="true" name="license_photo">
+                                                  </div>
+
+
+                                    <button type="submit"  class="btn btn-info" ng-disabled="addDriverForm.$invalid">Update</button>
+                                </form>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+                    <!-- /.row -->
+
+
+                    <!-- /.container-fluid -->
+
+            </div>
+                <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+    <script type="text/javascript" src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+
+</div>

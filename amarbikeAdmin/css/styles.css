@@ -1,0 +1,30 @@
+* { margin: 0; padding: 0; }
+html { height: 101%; }
+body { background: #f2f2f2 url('images/bg-tile.png'); padding-bottom: 65px; }
+
+
+h4 {font-size: 18px; line-height: 45px}
+img { border: 0; max-width: 75%; }
+
+
+
+/** @group core layout **/
+#w { margin: 0px 50px; padding: 20px 40px; padding-top: 35px; background: #fff; min-width: 260px; max-width: 900px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; -webkit-border-bottom-left-radius: 8px; -webkit-border-bottom-right-radius: 8px; -moz-border-radius-bottomleft: 8px; -moz-border-radius-bottomright: 8px; }
+
+header { width: 100%; }
+
+/** @group personal settings **/
+#info { float: left; margin-bottom: 12px; }
+#photo { float: right; }
+#photo img {
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+background-color: #fff;
+border: 1px solid #ccc;
+padding: 5px;
+}
+
+/** @group skills **/
+
+/** @group clearfix **/

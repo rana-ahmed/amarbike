@@ -1,0 +1,74 @@
+<div>
+       
+        <link href="bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
+
+      
+            <div id="page-wrapper">
+
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">
+                                Dashboard <small>Statistics Overview</small>
+                            </h1>
+                            <ol class="breadcrumb">
+                                <li class="active">
+                                    <i class="fa fa-dashboard"></i> Dashboard
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+
+                    <!-- /.row -->
+
+
+                    <div class="row" ng-controller="UpdateBikeController">
+                        <h3>Update Bike Info</h3>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <form role="form" name="addBikeForm" ng-submit="saveBike()">
+
+                                    <div class="form-group" ng-class="{ 'has-error' : addBikeForm.bike_registration_number.$invalid && !addBikeForm.bike_registration_number.$pristine}">
+                                        <label>Registration Number</label>
+                                        <input class="form-control" name="registarion_no" ng-model="bike.registarion_no" ng-required="true">
+                                        <p ng-show="addBikeForm.bike_registration_number.$invalid&& !addBikeForm.bike_registration_number.$pristine" class="help-block">Registration Number is required.</p>
+                                    </div>
+
+
+                                    <div class="form-group" ng-class="{ 'has-error' : addBikeForm.bike_engine_number.$invalid && !addBikeForm.bike_engine_number.$pristine}">
+                                        <label>Engine Number</label>
+                                        <input class="form-control" name="engine_no" ng-model="bike.engine_no" ng-required="true">
+                                        <p ng-show="addBikeForm.bike_engine_number.$invalid&& !addBikeForm.bike_engine_number.$pristine" class="help-block">Engine Number is required.</p>
+                                    </div>
+
+                                    <div class="form-group" ng-class="{ 'has-error' : addBikeForm.bike_chassis_number.$invalid && !addBikeForm.bike_chassis_number.$pristine}">
+                                        <label>chassis Number</label>
+                                        <input class="form-control" name="cessis_no" ng-model="bike.cessis_no"  ng-required="true" ng-minlength="13" ng-maxlength="17" ng-required="true">
+                                        <p ng-show="addBikeForm.bike_chassis_number.$invalid && !addBikeForm.bike_chassis_number.$pristine" class="help-block">Chassis is required.</p>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary" ng-disabled="addBikeForm.$invalid">Submit</button>
+                                </form>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+                    <!-- /.row -->
+
+
+                    <!-- /.container-fluid -->
+
+            </div>
+                <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+    <script type="text/javascript" src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+
+</div>

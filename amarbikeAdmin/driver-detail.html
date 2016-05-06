@@ -1,0 +1,44 @@
+<div>
+
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Simonetta:400,900|Balthazar">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+  <div id="page-wrapper">
+
+    <center>
+      <div id="w" ng-controller="DriverDetailController">
+        <center><h1>Driver Information</h1></center>
+        <header class="clearfix">
+          <div id="info">
+            <h4><span itemprop="Driver ID">Driver ID : {{driverData.id}}</span></h4>
+            <h4><span itemprop="name">Name : {{driverData.name}}</span></h4>
+            <h4><span itemprop="Address">Address : {{driverData.address}}</span></h4>
+            <h4><span itemprop="Contact Number">National ID : {{driverData.nid}}</span></h4>
+            <h4><span itemprop="name">License : {{driverData.license_id}}</span></h4>
+            <h4><span itemprop="name">Contact Number : {{driverData.contact}}</span></h4>
+          </div>
+
+          <div id="photo">
+            <img ng-src="{{driverData.driver_photo}}" alt="Driver photo avatar" itemprop="image"/><br>
+            <h4>Driver photo</h4>
+          </div>
+        </header>
+        <header class="clearfix">
+           <div id = "info"></div>
+          <div id = "photo">
+            <img ng-src="{{driverData.license_photo}}" alt="Driver photo avatar" itemprop="image"/>
+          </div>
+        </header>
+        <header class="clearfix">
+           <div id = "info"></div>
+          <div id = "photo">
+            <img ng-src="{{driverData.nid_photo}}" alt="Driver photo avatar" itemprop="image"/>
+          </div>
+        </header>
+      </div>
+    </center>
+  </div>
+</div>
