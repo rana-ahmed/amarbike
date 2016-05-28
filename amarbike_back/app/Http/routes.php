@@ -23,4 +23,7 @@ Route::group(array('prefix' => 'api/v1'), function()
 
     Route::resource('bike', 'BikeController');
     Route::post('bike/{id}', 'BikeController@update');
+
+    Route::resource('user', 'UserController');
+    Route::post('user/{id}', 'UserController@update');
 });
